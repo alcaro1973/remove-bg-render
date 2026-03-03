@@ -2,3 +2,5 @@ fastapi
 uvicorn
 rembg
 onnxruntime
+pillow
+numpy
