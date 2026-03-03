@@ -1,3 +1,4 @@
+import config
 from fastapi import FastAPI, UploadFile, File
 from fastapi.responses import Response
 from rembg import remove
@@ -23,5 +24,6 @@ async def remove_bg(file: UploadFile = File(...)):
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
     uvicorn.run("main:app", host="0.0.0.0", port=port)
+
 
 
