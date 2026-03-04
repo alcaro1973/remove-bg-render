@@ -1,11 +1,9 @@
-# Install Python requirements
-echo "Installing Python requirements..."
-pip install -r requirements.txt
+#!/bin/bash
 
-# Install npm dependencies
-echo "Installing npm dependencies..."
-npm install
+echo "🚀 Iniciando aplicação..."
+echo "📡 PORT: $PORT"
+echo "🐍 Python: $(python --version)"
+echo "📦 Node: $(node --version)"
 
-# Start the server
-echo "Starting the server..."
-npm start
+# Iniciar o servidor Node.js
+node server.js
