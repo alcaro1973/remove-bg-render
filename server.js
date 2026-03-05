@@ -3,6 +3,24 @@ const multer = require('multer');
 const { spawn } = require('child_process');
 const path = require('path');
 const fs = require('fs');
+const cors = require('cors'); // <-- ADICIONE ESTA LINHA
+
+const app = express();
+
+// <-- ADICIONE ESTE BLOCO
+// Configuração CORS - permite requisições do seu frontend
+app.use(cors({
+    origin: '*', // Em produção, substitua * pelo seu domínio
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type']
+}));
+
+const upload = multer({ dest: 'uploads/' });
+const express = require('express');
+const multer = require('multer');
+const { spawn } = require('child_process');
+const path = require('path');
+const fs = require('fs');
 
 const app = express();
 const upload = multer({ dest: 'uploads/' });
